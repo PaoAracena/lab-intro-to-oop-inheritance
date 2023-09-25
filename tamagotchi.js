@@ -38,17 +38,32 @@ class Tamagotchi {
             this.full = 9;
             this.energy - 3;
          } else {
-            console.log(`${this.name} refused to take medicine`)
+            console.log(`${this.name} medicate for not sick tamagotchi reduces energy by 1`)
             this.energy - 1;
          }
      }
 
     sleep () {
-        this.energy +4 ;
-        this.full -3;
+        this.energy += 4 ;
+        this.full -= 3;
     }
-    
-    
+
+    timePasses () {
+        if (this.sick = false){
+            this.mood -= 2;
+            this.full -= 1;
+            this.energy -= 1;
+        } else {
+            this.mood -= 3;
+            this.full -= 2; 
+            this.energy -= 2; 
+        }
+    }
+
+    badGuardian() {
+        console.log(`You have been a bad guardian. ${this.name} has been rehomed.`);
+        this.rehomed = true;
+    }
 
 }
 //         name: string
