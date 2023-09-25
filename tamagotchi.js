@@ -32,13 +32,22 @@ class Tamagotchi {
             
         }
     }
-    // medicate () {
-    //     console.log(
-    //         this.sick?
-    //         `${this.full}:9` this.energy - 3 : `${this.name} has spoiled.`
-    //     )
-    //    this.fresh = this.daysToSpoil ? false : true
-    //       }
+    
+    medicate () {
+         if (this.sick = true) {
+            this.full = 9;
+            this.energy - 3;
+         } else {
+            console.log(`${this.name} refused to take medicine`)
+            this.energy - 1;
+         }
+     }
+
+    sleep () {
+        this.energy +4 ;
+        this.full -3;
+    }
+    
     
 
 }
